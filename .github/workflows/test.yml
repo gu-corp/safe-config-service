@@ -117,7 +117,7 @@ jobs:
           build-args: |
             BUILD_NUMBER=${{ env.BUILD_NUMBER }}
             VERSION=${{ github.ref_name }}
-          tags: safeglobal/safe-config-service:staging
+          tags: gulabs/safe-config-service:staging
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
       - # Temp fix
@@ -166,8 +166,8 @@ jobs:
             BUILD_NUMBER=${{ env.BUILD_NUMBER }}
             VERSION=${{ github.ref_name }}
           tags: |
-            safeglobal/safe-config-service:${{ github.event.release.tag_name }}
-            safeglobal/safe-config-service:latest
+            gulabs/safe-config-service:${{ github.event.release.tag_name }}
+            gulabs/safe-config-service:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
       - # Temp fix
